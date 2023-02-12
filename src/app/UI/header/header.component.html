@@ -1,1 +1,45 @@
-<p>header works!</p>
+<p>
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" [routerLink]="['']">
+      <mat-icon>home</mat-icon>
+    </button>
+
+    <span>Bybabe Store</span>
+
+    <span class="example-spacer"></span>
+
+
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+            [routerLink]="['products']">
+      <mat-icon>widgets</mat-icon>
+    </button>
+
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+            [routerLink]="['basket']">
+      <mat-icon>shopping_basket</mat-icon>
+    </button>
+    <ng-container>
+      <button
+        *ngIf="!auth.isAuthenticated() else loginBlock"
+        mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+        [routerLink]="['login']"
+
+      >
+        <mat-icon>person_add</mat-icon>
+      </button>
+    </ng-container>
+
+    <ng-template #loginBlock>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+              [routerLink]="['login']"
+              (click)="logout($event)"
+
+      >
+        <mat-icon>logout</mat-icon>
+      </button>
+    </ng-template>
+
+
+  </mat-toolbar>
+
+</p>

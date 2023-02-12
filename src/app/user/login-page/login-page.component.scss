@@ -1,0 +1,32 @@
+form {
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  margin: 2rem;
+  border: 1px solid black;
+
+  border-radius: 10px;
+}
+
+mat-label {
+  color: black;
+  width: 350px;
+}
+
+mat-form-field {
+ 
+  display: flex;
+  width: 400px;
+  justify-content: center;
+  margin: 1rem;
+}
+
+button {
+  margin: 1rem;
+}
+
+span {
+  margin: 5px;
+}
